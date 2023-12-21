@@ -68,10 +68,12 @@ class WaveSimulator:
         def update(frame):
             ax.clear()
             # ax.set_title(f'Time Step: {frame}')
-            ax.set_xlabel('X')
-            ax.xaxis.label.set_color('white')
-            ax.set_ylabel('Y')
-            ax.yaxis.label.set_color('white')
+            # ax.set_xlabel('X')
+            # ax.xaxis.label.set_color('white')
+            # ax.set_ylabel('Y')
+            # ax.yaxis.label.set_color('white')
+            ax.set_xticklabels([])  # Remove x-axis labels
+            ax.set_yticklabels([])  # Remove y-axis labels
             ax.imshow(historyData[frame], cmap='viridis', extent=[0, Lx, 0, Ly], origin='lower')
         fig, ax = plt.subplots()
         Lx, Ly = historyData[0].shape[1], historyData[0].shape[0]
