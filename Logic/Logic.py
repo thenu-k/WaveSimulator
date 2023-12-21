@@ -80,8 +80,8 @@ class WaveSimulator:
         animation = FuncAnimation(fig, update, frames=len(historyData), interval=10, repeat=False)
         plt.show()
         if save:
-            animation.save('waveSimAnimation.gif', fps=30, savefig_kwargs=dict(transparent=True))
-            print('-> Animation saved to waveSimAnimation.gif. ')
+            animation.save('waveSimAnima.gif', fps=30, savefig_kwargs=dict(transparent=True))
+            print('-> Animation saved to waveSimAnim.gif. ')
         
         
 

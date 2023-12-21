@@ -15,10 +15,10 @@ waveSim = WaveSimulator(
 )
 
 
-# waveSim.simulate(
-#     timeLimit=5.0,
-#     saveData=True
-# )
+waveSim.simulate(
+    timeLimit=5.0,
+    saveData=True
+)
 
 waveSim.animate(
     save=True,
