@@ -1,6 +1,6 @@
-### Wave Simulator - 2D
+## Wave Simulator - 2D
 
-[Work-in Progress]
+### [Work-in Progress]
 
 <img src="https://raw.githubusercontent.com/thenu-k/WaveSimulator/main/waveSimAnimation.gif" height="300">
 

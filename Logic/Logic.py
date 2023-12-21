@@ -64,20 +64,21 @@ class WaveSimulator:
             print('-> Data saved to: '+fileName)
     
     def animate(self, save, fileName):
-        # get nmpy data from npy file
         historyData = np.load(fileName)
         def update(frame):
             ax.clear()
-            ax.set_title(f'Time Step: {frame}')
+            # ax.set_title(f'Time Step: {frame}')
             ax.set_xlabel('X')
+            ax.xaxis.label.set_color('white')
             ax.set_ylabel('Y')
+            ax.yaxis.label.set_color('white')
             ax.imshow(historyData[frame], cmap='viridis', extent=[0, Lx, 0, Ly], origin='lower')
         fig, ax = plt.subplots()
         Lx, Ly = historyData[0].shape[1], historyData[0].shape[0]
         animation = FuncAnimation(fig, update, frames=len(historyData), interval=10, repeat=False)
         plt.show()
         if save:
-            animation.save('waveSimAnimation.gif', fps=30)
+            animation.save('waveSimAnimation.gif', fps=30, savefig_kwargs=dict(transparent=True))
             print('-> Animation saved to waveSimAnimation.gif. ')
         
         

@@ -15,12 +15,10 @@ waveSim = WaveSimulator(
 )
 
 
-waveSim.simulate(
-    timeLimit=5.0,
-    saveData=True
-)
-
-datetime = str(datetime.datetime.now()).replace(' ','').replace('.','')
+# waveSim.simulate(
+#     timeLimit=5.0,
+#     saveData=True
+# )
 
 waveSim.animate(
     save=True,
