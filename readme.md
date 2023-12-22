@@ -11,9 +11,7 @@ To run the programme simply run the `main.py` file or by using `npm run start` i
 ### Methodology
 
 The two dimensional wave equation is given by:
-\[
-    u_{tt} = c^2 \left( u_{xx} + u_{yy} \right)  
-\\
-\Rightarrow \frac{\partial^2 u}{\partial t^2} = c^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)
-\]
- 
+
+<img src="https://latex.codecogs.com/gif.latex?u_{tt} = c^2 \left( u_{xx} + u_{yy} \right)" />
+<p></p>
+<img src="https://latex.codecogs.com/gif.latex?\Rightarrow \frac{\partial^2 u}{\partial t^2} = c^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)" />
