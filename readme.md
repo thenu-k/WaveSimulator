@@ -10,9 +10,10 @@ To run the programme simply run the `main.py` file or by using `npm run start` i
 
 ### Methodology
 
-The wave equation is a second order partial differential equation that describes the propagation of waves through a medium. It is given by:
-
-```latex
+The two dimensional wave equation is given by:
 \[
-\sqrt{3x-1}+(1+x)^2
+    u_{tt} = c^2 \left( u_{xx} + u_{yy} \right)  
+\\
+\Rightarrow \frac{\partial^2 u}{\partial t^2} = c^2 \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} \right)
 \]
+ 
