@@ -34,6 +34,14 @@ $$ \frac{d^2 U_{mn}}{d t^2} = -\alpha^2 \cdot \left( \frac{m^2 \pi^2}{L^2} + \fr
 
 We can also get this by comparing the coefficients of the previoius equation. We can see that a possible solution for this equation is a complex exponential of the form:
 
-$$ U_{mn}(t) = U_{mn}(0) \cdot e^{i \omega t} $$
+$$ U_{mn}(t) = U_{mn}(0) \cdot e^{-i \omega t} $$
 
-Where $\omega$ is the angular frequency and $A_{mn}$ is the amplitude. Substituting this into the previous equation we get:
+Where $\omega$ is the angular frequency and is given by:
+
+$$ \omega = \alpha \cdot \sqrt{\left( \frac{m \pi}{L} \right)^2 + \left( \frac{n \pi}{L} \right)^2} $$
+
+We can get the following expression by doing multiple substitutions:
+
+$$ U_{mn}(t+\Delta t) = U_{mn}(t)\cdot e^{-i\omega \Delta t}  $$
+
+Thus we have a set of ODEs for the fourier coefficients which we solve using the previous equation. We can then perform an inverse fourier transform to get the solution in real space at that point in time. 
