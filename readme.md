@@ -1,10 +1,12 @@
-## Wave Simulator - 2D [Work-in Progress]
+## Wave Simulator - 2D 
 
 <centre>
 <img src="https://raw.githubusercontent.com/thenu-k/WaveSimulator/main/Media/animation_2023-12-22_15-18-02.gif" height="500">
 </centre>
 
-As of the latest commit, this programme simulates the 2D wave equation using finite differences with Dirilect boundary conditions. I'll be planning to add more features such as other boundary conditions, a wave generator, etc. 
+This programme simulates the propogation of waves using the 2D wave equation via the fourier-spectral method. It can also solve it via the finite differences method.
+
+To run the programme simply run the `main.py` file or by using `npm run start` if you have node installed.
 
 ### Methodology
 
