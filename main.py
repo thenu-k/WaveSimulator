@@ -1,26 +1,19 @@
-from Logic.Logic import WaveSimulator
+from Logic.Spectral import SpectralSolver
 import numpy as np
-import datetime
 
 # Initial Conditions
-restCondition = np.zeros((200,200))
+dimension = 201
+rainDrop = np.zeros((dimension,dimension))
+rainDrop[int(dimension/2),int(dimension/2)] = 100.0
 
-
-waveSim = WaveSimulator(
-    mediumX=1.0, 
-    mediumY=1.0,
-    mediumWaveSpeed=0.3,
-    temporalResolution=0.01,
-    initialAmplitudes=restCondition,
+# Solver
+solver = SpectralSolver(
+    initialConditions=rainDrop,
+    spatialDimensions=1.0,
+    temperalResolution=0.01,
+    waveSpeed=1.0
 )
 
-
-waveSim.simulate(
-    timeLimit=5.0,
-    saveData=True
-)
-
-waveSim.animate(
-    save=True,
-    fileName='waveSimData.npy'
-)
+# Simulation
+solver.simulate(timeLimit=1.0)
+solver.animate()
