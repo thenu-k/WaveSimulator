@@ -1,7 +1,8 @@
 from Logic.Spectral import SpectralSolver
 import numpy as np
+import datetime as date
 
-dimension = 201
+dimension = 301
 x = np.linspace(0, 1, dimension)
 y = np.linspace(0, 1, dimension)
 X, Y = np.meshgrid(x, y)
@@ -29,8 +30,12 @@ solver = SpectralSolver(
 )
 
 # Simulation
-solver.simulate(timeLimit=10.0)
+solver.simulate(timeLimit=5.0)
+
+# Animation
+currTime = date.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 solver.animate(
     save=True,
     timeStep=50,
+    fileName="animation_" + currTime + ".gif"
 )
