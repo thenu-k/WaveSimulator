@@ -26,7 +26,7 @@ $$ \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} \frac{\partial^2 U_{mn}}{\partial t^2
 
 Note that the fourier series is orthogonal so we can multiply both sides by $\sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y)$ to continue. Orthogonality is given by:
 
-$$ \int_{0}^{L} \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} x) dx = \begin{cases} 0 & \text{if } m \neq n \\ \frac{L}{2} & \text{if } m = n \end{cases} $$
+$$ \int_{0}^{L} \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} x) dx = 0 $$
 
 After integrating and simplifying we get:
 
