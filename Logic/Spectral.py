@@ -47,7 +47,7 @@ class SpectralSolver:
         newCoefficients[:, -1] = 0
         return newCoefficients
     
-    def animate(self, save=True):
+    def animate(self, save=True, timeStep=10):
         print("-> Animating...")
         historyData = self.history
         def update(frame):
@@ -59,7 +59,7 @@ class SpectralSolver:
             ax.axis('off')
         fig, ax = plt.subplots()
         Lx, Ly = historyData[0].shape[1], historyData[0].shape[0]
-        animation = FuncAnimation(fig, update, frames=len(historyData), interval=10, repeat=False)
+        animation = FuncAnimation(fig, update, frames=len(historyData), interval=timeStep, repeat=False)
         plt.show()
         if save:
             print("-> Saving animation to ./Media/animation.gif...")
