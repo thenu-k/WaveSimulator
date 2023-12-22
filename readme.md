@@ -24,15 +24,16 @@ Where $U_{mn}(t)$ are the fourier coefficients. We can then substitute this into
 
 $$ \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} \frac{\partial^2 U_{mn}}{\partial t^2} \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) = \alpha^2 \cdot \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} U_{mn}(t) \cdot \left( -\frac{m^2 \pi^2}{L^2} - \frac{n^2 \pi^2}{L^2} \right) \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) $$
 
-Note that the fourier series is orthogonal so we can multiply both sides by $\sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y)$ and integrate over the domain:
+Note that the fourier series is orthogonal so we can multiply both sides by $\sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y)$ to continue. Orthogonality is given by:
 
-$$ \int_{0}^{L} \int_{0}^{L} \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} \frac{\partial^2 U_{mn}}{\partial t^2} \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \,dx\,dy = \int_{0}^{L} \int_{0}^{L} \alpha^2 \cdot \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} U_{mn}(t) \cdot \left( -\frac{m^2 \pi^2}{L^2} - \frac{n^2 \pi^2}{L^2} \right) \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \,dx\,dy $$
+$$ \int_{0}^{L} \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} x) dx = \begin{cases} 0 & \text{if } m \neq n \\ \frac{L}{2} & \text{if } m = n \end{cases} $$
 
-We can then use the orthogonality of the fourier series to simplify the equation:
+After integrating and simplifying we get:
 
-$$ \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} \frac{\partial^2 U_{mn}}{\partial t^2} \cdot \int_{0}^{L} \int_{0}^{L} \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \,dx\,dy = \alpha^2 \cdot \sum_{n=0}^{\infty} \sum_{m=0}^{\infty} U_{mn}(t) \cdot \left( -\frac{m^2 \pi^2}{L^2} - \frac{n^2 \pi^2}{L^2} \right) \cdot \int_{0}^{L} \int_{0}^{L} \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \cdot \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \,dx\,dy $$
+$$ \frac{d^2 U_{mn}}{d t^2} = -\alpha^2 \cdot \left( \frac{m^2 \pi^2}{L^2} + \frac{n^2 \pi^2}{L^2} \right) \cdot U_{mn} $$
 
-We can then use the following identity to simplify the equation further:
+We can also get this by comparing the coefficients of the previoius equation. We can see that a possible solution for this equation is a complex exponential of the form:
 
-$$ \int_{0}^{L} \sin(\frac{m \pi}{L} x) \cdot \sin(\frac{n\pi}{L} y) \,dx = \begin{cases} 0 & \text{if } m \neq n \\ \frac{L}{2} & \text{if } m = n \end{cases} $$
+$$ U_{mn}(t) = U_{mn}(0) \cdot e^{i \omega t} $$
 
+Where $\omega$ is the angular frequency and $A_{mn}$ is the amplitude. Substituting this into the previous equation we get:
