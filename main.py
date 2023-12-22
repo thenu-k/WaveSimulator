@@ -7,7 +7,7 @@ x = np.linspace(0, 1, dimension)
 y = np.linspace(0, 1, dimension)
 X, Y = np.meshgrid(x, y)
 
-# Initial Conditions
+# Rain drop
 rainDrop = np.zeros((dimension,dimension))
 rainDrop[int(dimension/2),int(dimension/2)] = 100.0
 
@@ -21,9 +21,13 @@ for i in range(dimension):
         if np.sqrt((i-dimension/2)**2 + (j-dimension/2)**2) < dimension/4:
             circleConditions[i,j] = 1.0
 
+# Standing wave
+standingWaveConditions = np.sin(2*np.pi*X)*np.sin(2*np.pi*Y) + np.sin(4*np.pi*X)*np.sin(4*np.pi*Y)
+
+
 # Solver
 solver = SpectralSolver(
-    initialConditions=circleConditions,
+    initialConditions=standingWaveConditions,
     spatialDimensions=1.0,
     temperalResolution=0.01,
     waveSpeed=1.0
