@@ -12,6 +12,7 @@ To run the programme simply run the `main.py` file or by using `npm run start` i
 
 The wave equation is a second order partial differential equation that describes the propagation of waves through a medium. It is given by:
 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{\partial^2 u}{\partial t^2} = c^2 \nabla^2 u">
-
-where <img src="https://render.githubusercontent.com/render/math?math=u"> is the displacement of the wave, <img src="https://render.githubusercontent.com/render/math?math=c"> is the speed of the wave and <img src="https://render.githubusercontent.com/render/math?math=\nabla^2"> is the laplacian operator.s
+```latex
+\[
+\sqrt{3x-1}+(1+x)^2
+\]
